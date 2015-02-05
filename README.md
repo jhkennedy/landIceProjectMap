@@ -15,6 +15,8 @@ The `.png` version was created with ImageMagik using the comand:
 ```bash
 convert main.pdf main.png
 ```
+ImageMagik can convert to a number of different image 
+[formats](http://www.imagemagick.org/script/formats.php).
 
 If you would like to use this map in your LaTeX document, you can fork this repo 
 into your own branch, or clone it with this command:
