@@ -1,0 +1,52 @@
+\node [climateModel] (CESM) {CESM};
+\node [climateModel] (ACME)   at ([shift={(3,0)}] CESM) {ACME};
+
+\node [iceModel] (CISM)       at ([shift={(0,-1.5)}] CESM) {CISM};
+\node [iceModel] (MPAS)       at ([shift={(0,-1.5)}] ACME) {MPAS};
+
+
+\node [dycore] (Glissade)     at ([shift={(-1.5,-1.25)}] CISM) {
+    Glissade \\ (native)
+    \nodepart{second} SIA \\ SSA \\ L1L2 \\ FO
+    };
+\node [dycore] (BISICLES)     at ([shift={(-0,-2)}] CISM) {
+    BISICLES
+    \nodepart{second} L1L2 
+    };
+\node [dycore] (Albany) at ([shift={(1.5,-1.25)}] CISM) {
+    Albany/FELIX
+    \nodepart{second} FO
+    };
+
+
+\node [dycore] (PHG)    at ([shift={(-.5,-2)}] MPAS) {
+    PHG-FELIX 
+    \nodepart{second} Stokes
+    };
+\node [dycore] (LifeV)        at ([shift={(1,-1.75)}] MPAS) {
+    LifeV
+    \nodepart{second} SSA \\ L1L2 \\ FO
+    };
+\node [dycore] (Native)       at ([shift={(1.5,-.75)}] MPAS) {
+    Native
+    \nodepart{second} SIA
+    };
+
+
+\draw [arrow] (CISM) -- (CESM);
+\draw [dashedArrow] (CISM) -- (ACME);
+\draw [dashedArrow] (MPAS) -- (ACME);
+
+\draw [arrow] (Glissade) -- (CISM);
+\draw [arrow] (Albany) -- (CISM);
+\draw [arrow] (BISICLES) -- (CISM);
+
+\draw [arrow] (Albany) -- (MPAS);
+\draw [arrow] (PHG) -- (MPAS);
+\draw [arrow] (LifeV) -- (MPAS);
+\draw [arrow] (Native) -- (MPAS);
+
+\node [textBox] at ([shift={(0,-.75)}] CESM) {GLC}; 
+\node [textBox] at ([shift={(1.5,-.75)}] CESM) {GLC $^{\star}$};
+\node [textBox] at ([shift={(3,-.75)}] CESM) {GLC $^{\star}$};
+
