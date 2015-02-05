@@ -5,11 +5,19 @@
 \node [iceModel] (MPAS)       at ([shift={(0,-1.5)}] ACME) {MPAS};
 
 
-\node [dycore] (Glissade)     at ([shift={(-1.5,-1.25)}] CISM) {
-    Glissade \\ (native)
-    \nodepart{second} SIA \\ SSA \\ L1L2 \\ FO
+\node [dycore] (Glide)        at ([shift={(-1.5,-.75)}] CISM) {
+    Glide \\ (native)
+    \nodepart{second} SIA
     };
-\node [dycore] (BISICLES)     at ([shift={(-0,-2)}] CISM) {
+\node [dycore] (Glissade)     at ([shift={(-.75,-1.75)}] CISM) {
+    Glissade \\ (native)
+    \nodepart{second} 
+    \begin{tabular}{c|c}
+        SIA & L1L2 \\ 
+        SSA & FO 
+    \end{tabular}
+    };
+\node [dycore] (BISICLES)     at ([shift={(.75,-2.02)}] CISM) {
     BISICLES
     \nodepart{second} L1L2 
     };
@@ -19,11 +27,11 @@
     };
 
 
-\node [dycore] (PHG)    at ([shift={(-.5,-2)}] MPAS) {
+\node [dycore] (PHG)    at ([shift={(-.5,-2.02)}] MPAS) {
     PHG-FELIX 
     \nodepart{second} Stokes
     };
-\node [dycore] (LifeV)        at ([shift={(1,-1.75)}] MPAS) {
+\node [dycore] (LifeV)        at ([shift={(1,-1.8)}] MPAS) {
     LifeV
     \nodepart{second} SSA \\ L1L2 \\ FO
     };
@@ -38,6 +46,7 @@
 \draw [dashedArrow] (MPAS) -- (ACME);
 
 \draw [arrow] (Glissade) -- (CISM);
+\draw [arrow] (Glide) -- (CISM);
 \draw [arrow] (Albany) -- (CISM);
 \draw [arrow] (BISICLES) -- (CISM);
 
