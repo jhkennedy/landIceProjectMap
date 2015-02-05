@@ -23,7 +23,7 @@ into your own branch, or clone it with this command:
 ```
 git clone git@github.com:jhkennedy/landIceProjectMap.git
 ```
-Alternatively, you can download a `.zip` by clicking download link on the right.
+Alternatively, you can download a `.zip` by clicking the download link on the right.
 
 
 How to insert this map into your LaTeX document:
