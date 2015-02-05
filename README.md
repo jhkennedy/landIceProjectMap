@@ -10,7 +10,11 @@ This map was created with the tikz package for LaTeX.
 Get your copy:
 --------------
 
-You can download a `.pdf` by clicking [here][pdf].
+You can download a `.pdf` by clicking [here][pdf] or a `.png` by clicking [here][mapRaw].
+The `.png` version was created with ImageMagik using the comand:
+```bash
+convert main.pdf main.png
+```
 
 If you would like to use this map in your LaTeX document, you can fork this repo 
 into your own branch, or clone it with this command:
@@ -46,4 +50,5 @@ You can adjust the size by changing the scale value. For a minimal example, see
 Thats all folks!
 
 [map]: https://github.com/jhkennedy/landIceProjectMap/blob/master/main.png
-[pdf]: https://github.com/jhkennedy/landIceProjectMap/blob/master/main.pdf
+[mapRaw]: https://github.com/jhkennedy/landIceProjectMap/blob/master/main.png?raw=true
+[pdf]: https://github.com/jhkennedy/landIceProjectMap/blob/master/main.pdf?raw=true
