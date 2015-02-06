@@ -34,7 +34,7 @@ and `mapCommands.tex` into your LaTeX document directory. Then place these lines
 in your document preamble (after your `\usepackage` declarations):
 ```latex
 \usepackage{tikz}
-\usetikzlibrary{shapes, arrows, calc, fit}
+\usetikzlibrary{shapes, arrows}
 \input{mapStyle.tex}
 ```
 To insert the map, place these lines wherever you want the map figure to be:
